@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI assistant - Data Sanitization Tool</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI assistant - Data Sanitization Tool</h1>
+    
+    <div class="text-areas">
+      <textarea id="input" placeholder="Enter data to be sanitized"></textarea>
+      <textarea id="output" readonly placeholder="Sanitized data will appear here"></textarea>
+    </div>
+    
+    <div class="controls">
+      <div class="options">
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskIP" checked>
+          <label for="maskIP">Mask IP</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskHostname" checked>
+          <label for="maskHostname">Mask Hostname</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskID" checked>
+          <label for="maskID">Mask ID</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskEmail" checked>
+          <label for="maskEmail">Mask Email</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskPhone" checked>
+          <label for="maskPhone">Mask Phone</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskCreditCard" checked>
+          <label for="maskCreditCard">Mask Credit Card</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskSSN" checked>
+          <label for="maskSSN">Mask SSN</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="maskURL" checked>
+          <label for="maskURL">Mask URL</label>
+        </div>
+      </div>
+      
+      <div class="custom-regex">
+        <input type="text" id="customRegex" placeholder="Custom regex">
+        <input type="text" id="customReplacement" placeholder="Custom replacement">
+      </div>
+      
+      <button id="maskButton">Sanitize</button>
+      <button id="sendToChatGPT">Send to ChatGPT</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
